@@ -7,12 +7,12 @@ function appendNumber(num) {
 function appendOperator(op) {
     const value = display.value;
     
-    // Prevent multiple operators in a row
+    
     if (value && '+-*/.'.includes(value[value.length - 1]) && op !== '.') {
         return;
     }
     
-    // Prevent multiple dots
+   
     if (op === '.' && value.includes('.')) {
         return;
     }
@@ -40,7 +40,6 @@ function calculate() {
     }
 }
 
-// Allow keyboard input
 document.addEventListener('keydown', function(event) {
     const key = event.key;
     
